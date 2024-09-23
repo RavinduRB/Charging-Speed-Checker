@@ -1,0 +1,140 @@
+/* Reset and basic setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Animated background gradient */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+  background-size: 400% 400%;
+  animation: gradientBackground 10s ease infinite;
+  z-index: -2;
+}
+
+/* Gradient animation */
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* New floating particles background */
+.particle-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: floatParticles 8s ease-in-out infinite;
+}
+
+/* Particle animation */
+@keyframes floatParticles {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(100vw);
+    opacity: 0;
+  }
+}
+
+/* Dark Mode Styles */
+body.dark {
+  background-color: #222;
+  color: #ddd;
+}
+
+body.dark .container {
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode-toggle {
+  margin-top: 20px;
+}
+#dark-mode-switch {
+  margin-left: 10px;
+}
+
+/* Container */
+.container {
+  position: relative;
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Battery Icon */
+#battery-icon {
+  width: 80px;
+  height: 150px;
+  border: 4px solid #333;
+  border-radius: 8px;
+  position: relative;
+  margin: 20px auto;
+}
+
+#battery-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #4caf50;
+  transition: height 0.5s ease;
+}
+
+/* Text Styling */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+h2, h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.dark h1, .dark h2, .dark h3 {
+  color: #eee;
+}

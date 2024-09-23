@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charging Speed Checker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="background"></div>
+
+  <div class="container">
+    <h1>Charging Speed Checker</h1>
+    <div class="battery-visual">
+      <div id="battery-icon">
+        <div id="battery-fill"></div>
+      </div>
+      <h2>Battery Level: <span id="battery-level">--</span>%</h2>
+      <h3 id="charging-status">Status: Disconnected</h3>
+    </div>
+
+    <div class="charging-info">
+      <h3>Charging Speed: <span id="charging-speed">--</span>% per minute</h3>
+      <h3>Time Until Full: <span id="time-until-full">--</span> mins</h3>
+    </div>
+
+    <div class="dark-mode-toggle">
+      <label for="dark-mode-switch">Dark Mode:</label>
+      <input type="checkbox" id="dark-mode-switch">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
