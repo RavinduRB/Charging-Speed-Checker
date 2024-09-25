@@ -1,5 +1,9 @@
 # Charging Speed Checker
 
+After a long time, I was able to create a new application 😎🚀. So I was able to create a charging speed checker using HTML, CSS, and JavaScript.
+
+Here the battery level shows the current battery level. This is always updated. Also, when it is not plugged in, it shows as "Disconnected" and when it is plugged in, it shows as "Charging". Charge speed shows how many units are charged per minute. Finally, the time taken to fully charge is displayed in minutes.
+
 
 ![1](https://github.com/user-attachments/assets/4ed10cfc-bb45-4c56-98fb-487f86bdd542)
 **🟢 Shown as below when not plugged in to charge (light Mode)**
